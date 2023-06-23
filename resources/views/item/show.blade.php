@@ -11,29 +11,29 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Item</span>
+                            <span class="card-title">{{ __('Mostrar') }} Producto</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('items.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary" href="{{ route('items.index') }}"> {{ __('Volver') }}</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Name:</strong>
+                            <strong>Nombre:</strong>
                             {{ $item->name }}
                         </div>
                         <div class="form-group">
-                            <strong>Price:</strong>
+                            <strong>Precio:</strong>
                             {{ $item->price }}
                         </div>
                         <div class="form-group">
-                            <strong>Brand:</strong>
+                            <strong>Marca:</strong>
                             {{ $item->brand }}
                         </div>
                         <div class="form-group">
-                            <strong>Category Id:</strong>
+                            <strong>Id de categoria:</strong>
                             {{ $item->category_id }}
                         </div>
 

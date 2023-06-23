@@ -28,7 +28,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('clients', ClientController::class);
 Route::resource('categories', CategoryController::class);
 Route::resource('items', ItemController::class);
-Route::resource('purchase', PurchaseController::class);
+Route::resource('purchases', PurchaseController::class);
 Route::resource('storages', StorageController::class);
 
 

@@ -2,28 +2,28 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('name') }}
-            {{ Form::text('name', $item->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
+            {{ Form::label('nombre') }}
+            {{ Form::text('name', $item->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Nombre']) }}
             {!! $errors->first('name', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('price') }}
-            {{ Form::text('price', $item->price, ['class' => 'form-control' . ($errors->has('price') ? ' is-invalid' : ''), 'placeholder' => 'Price']) }}
+            {{ Form::label('precio') }}
+            {{ Form::text('price', $item->price, ['class' => 'form-control' . ($errors->has('price') ? ' is-invalid' : ''), 'placeholder' => 'Precio']) }}
             {!! $errors->first('price', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('brand') }}
-            {{ Form::text('brand', $item->brand, ['class' => 'form-control' . ($errors->has('brand') ? ' is-invalid' : ''), 'placeholder' => 'Brand']) }}
+            {{ Form::label('Marca') }}
+            {{ Form::text('brand', $item->brand, ['class' => 'form-control' . ($errors->has('brand') ? ' is-invalid' : ''), 'placeholder' => 'Marca']) }}
             {!! $errors->first('brand', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('category_id') }}
-            {{ Form::text('category_id', $item->category_id, ['class' => 'form-control' . ($errors->has('category_id') ? ' is-invalid' : ''), 'placeholder' => 'Category Id']) }}
+            {{ Form::label('id de categoria') }}
+            {{ Form::text('category_id', $item->category_id, ['class' => 'form-control' . ($errors->has('category_id') ? ' is-invalid' : ''), 'placeholder' => 'Id de categoria']) }}
             {!! $errors->first('category_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
+        <button type="submit" class="btn btn-primary">{{ __('Aceptar') }}</button>
     </div>
 </div>
