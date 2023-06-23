@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property $id
  * @property $ammount
+ * @property $storages_id
  * @property $item_id
  * @property $manager_id
  * @property $clients_id
@@ -16,6 +17,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property $updated_at
  *
  * @property Client $client
+ * @property Item $item
  * @property Storage $storage
  * @property User $user
  * @package App
@@ -26,6 +28,7 @@ class Purchase extends Model
     
     static $rules = [
 		'ammount' => 'required',
+		'storages_id' => 'required',
 		'item_id' => 'required',
 		'manager_id' => 'required',
 		'clients_id' => 'required',
@@ -38,7 +41,7 @@ class Purchase extends Model
      *
      * @var array
      */
-    protected $fillable = ['ammount','item_id','manager_id','clients_id'];
+    protected $fillable = ['ammount','storages_id','item_id','manager_id','clients_id'];
 
 
     /**
@@ -52,9 +55,17 @@ class Purchase extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
+    public function item()
+    {
+        return $this->hasOne('App\Models\Item', 'id', 'item_id');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
     public function storage()
     {
-        return $this->hasOne('App\Models\Storage', 'item_id', 'item_id');
+        return $this->hasOne('App\Models\Storage', 'id', 'storages_id');
     }
     
     /**

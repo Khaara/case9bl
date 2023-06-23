@@ -25,6 +25,10 @@
                             {{ $purchase->ammount }}
                         </div>
                         <div class="form-group">
+                            <strong>Storages Id:</strong>
+                            {{ $purchase->storages_id }}
+                        </div>
+                        <div class="form-group">
                             <strong>Item Id:</strong>
                             {{ $purchase->item_id }}
                         </div>

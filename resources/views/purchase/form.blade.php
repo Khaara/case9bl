@@ -2,28 +2,33 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('cantidad') }}
-            {{ Form::text('ammount', $purchase->ammount, ['class' => 'form-control' . ($errors->has('ammount') ? ' is-invalid' : ''), 'placeholder' => 'cantidad']) }}
+            {{ Form::label('ammount') }}
+            {{ Form::text('ammount', $purchase->ammount, ['class' => 'form-control' . ($errors->has('ammount') ? ' is-invalid' : ''), 'placeholder' => 'Ammount']) }}
             {!! $errors->first('ammount', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('id de producto') }}
-            {{ Form::text('item_id', $purchase->item_id, ['class' => 'form-control' . ($errors->has('item_id') ? ' is-invalid' : ''), 'placeholder' => 'Id']) }}
+            {{ Form::label('storages_id') }}
+            {{ Form::text('storages_id', $purchase->storages_id, ['class' => 'form-control' . ($errors->has('storages_id') ? ' is-invalid' : ''), 'placeholder' => 'Storages Id']) }}
+            {!! $errors->first('storages_id', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('item_id') }}
+            {{ Form::text('item_id', $purchase->item_id, ['class' => 'form-control' . ($errors->has('item_id') ? ' is-invalid' : ''), 'placeholder' => 'Item Id']) }}
             {!! $errors->first('item_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('id de vendedor') }}
-            {{ Form::text('manager_id', $purchase->manager_id, ['class' => 'form-control' . ($errors->has('manager_id') ? ' is-invalid' : ''), 'placeholder' => 'Id']) }}
+            {{ Form::label('manager_id') }}
+            {{ Form::text('manager_id', $purchase->manager_id, ['class' => 'form-control' . ($errors->has('manager_id') ? ' is-invalid' : ''), 'placeholder' => 'Manager Id']) }}
             {!! $errors->first('manager_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('id de cliente') }}
-            {{ Form::text('clients_id', $purchase->clients_id, ['class' => 'form-control' . ($errors->has('clients_id') ? ' is-invalid' : ''), 'placeholder' => 'Id']) }}
+            {{ Form::label('clients_id') }}
+            {{ Form::text('clients_id', $purchase->clients_id, ['class' => 'form-control' . ($errors->has('clients_id') ? ' is-invalid' : ''), 'placeholder' => 'Clients Id']) }}
             {!! $errors->first('clients_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">{{ __('Aceptar') }}</button>
+        <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
     </div>
 </div>

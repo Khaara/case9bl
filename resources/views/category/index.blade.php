@@ -34,9 +34,9 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
-                                        
-										<th>Name</th>
+                                        <th>Id</th>
+
+										<th>Nombre</th>
 
                                         <th></th>
                                     </tr>
@@ -45,7 +45,7 @@
                                     @foreach ($categories as $category)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
+
 											<td>{{ $category->name }}</td>
 
                                             <td>
